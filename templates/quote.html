@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attractive Text Display</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #0056b3;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .quote {
+            font-style: italic;
+            background-color: #e0f7fa;
+            padding: 15px;
+            border-left: 5px solid #00acc1;
+            margin: 20px 0;
+            color: #006064;
+        }
+
+        .author {
+            text-align: right;
+            color: #00796b;
+            font-weight: bold;
+        }
+        .submit-btn {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #0056b3;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .button:hover {
+            background-color: #003f7f;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Inspirational Quote</h1>
+        <p>Sometimes, the most important thing in a whole day is the rest we take between two deep breaths.</p>
+        <div class="quote">
+            <p>{{modified_input}}</p>
+            <div class="author">- Unknown</div>
+        </div>
+        <p>Embrace the present moment and find tranquility amidst the chaos. Every breath is a chance to start anew.</p>
+        <button type="submit" class="submit-btn" onclick="refreshPage()">Regenerate</button>
+    </div>
+    <script>
+        function refreshPage() {
+            // Prevent the default form submission
+            event.preventDefault();
+            
+            // Refresh the page
+            location.reload();
+        }
+    </script>
+</body>
+</html>
