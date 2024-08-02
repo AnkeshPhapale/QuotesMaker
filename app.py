@@ -1,16 +1,15 @@
 from flask import Flask, render_template, request, redirect, url_for, session
-# import google.generativeai as genai
+import google.generativeai as genai
 
 app = Flask(__name__)
 app.secret_key = 'supersecretkey'  # Replace with a real secret key
 
 def getquote(topic):
-    # genai.configure(api_key='AIzaSyAwWfqZTf5FonESubc3ECQsBlRakOdBv00')
-    # model = genai.GenerativeModel('gemini-1.5-pro')
-    # topic = "give me one new motivational quote on " + topic
-    # quote = model.generate_content(topic)
-    # return quote.text
-    return "hello all"
+    genai.configure(api_key='AIzaSyAwWfqZTf5FonESubc3ECQsBlRakOdBv00')
+    model = genai.GenerativeModel('gemini-1.5-pro')
+    topic = "give me one new motivational quote on " + topic
+    quote = model.generate_content(topic)
+    return quote.text
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
