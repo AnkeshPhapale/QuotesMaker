@@ -1,0 +1,31 @@
+# Ignore SSH key files
+sshkeyubuntuoracle.key
+sshkeyubuntuoracle.pub
+.ppk
+privatekeylinux.ppk
+
+# If your key files are in a specific directory, for example, in a 'keys' directory
+keys/*.key
+keys/*.pub
+
+# Ignore other sensitive files
+*.pem
+*.crt
+*.cer
+*.pfx
+*.p12
+
+# Ignore Python bytecode
+__pycache__/
+*.pyc
+
+# Ignore virtual environment directories
+env/
+venv/
+.venv/
+
+# Ignore other common files and directories
+.DS_Store
+*.log
+.idea/
+.vscode/
